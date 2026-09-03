@@ -79,7 +79,7 @@ export const projects = [
     year: '2025 — 2026', role: 'AI 视频 / 动态视觉包装', tools: ['AI 视频生成', 'After Effects', 'Premiere'],
     meta: ['游戏 PV'],
     cover: '/assets/covers/seven-days.webp',
-    videos: [{ label: '七日世界 PV', duration: '06:51', src: '/videos/seven-days.mp4', poster: '/assets/covers/seven-days.webp' }],
+    videos: [{ label: '七日世界 PV', duration: '06:51', src: 'https://portfolio-videos-1341078655.cos.ap-guangzhou.myqcloud.com/seven-days.mp4', poster: '/assets/covers/seven-days.webp' }],
     steps: null, assetGroups: [],
   },
 
@@ -94,7 +94,7 @@ export const projects = [
     tools: ['ComfyUI', '多参考图视频', 'After Effects', 'Premiere'],
     meta: ['短剧制作', '角色设定', '海报视觉', 'AI视频生成'],
     cover: '/assets/covers/mermaid.webp',
-    videos: [{ label: '海外美人鱼短剧（成片 · 竖屏）', duration: '10:41', src: '/videos/drama-mermaid.mp4', poster: '/assets/covers/mermaid.webp', portrait: true }],
+    videos: [{ label: '海外美人鱼短剧（成片 · 竖屏）', duration: '10:41', src: 'https://portfolio-videos-1341078655.cos.ap-guangzhou.myqcloud.com/drama-mermaid.mp4', poster: '/assets/covers/mermaid.webp', portrait: true }],
     steps: [
       { title: '剧本拆解与分镜设计', desc: '将完整剧本按场景拆解为分镜脚本，标注镜头类型、运镜方式、角色情绪和关键动作，形成可执行的生成清单。' },
       { title: '角色设定与 AI 资产产出', desc: '使用 AI 图像生成工具进行角色形象设计，输出多角度、多表情的角色参考图，确保前后镜头角色一致性。' },
@@ -127,7 +127,7 @@ export const projects = [
     tools: ['LLM 剧本', 'AI 生图', '多参考图视频', 'Premiere'],
     meta: ['漫剧制作', 'AI生图', '多参视频'],
     cover: '/assets/covers/comic-drama.webp',
-    videos: [{ label: '新算法之外 PV', duration: '05:52', src: '/videos/comic-drama.mp4', poster: '/assets/covers/comic-drama.webp' }],
+    videos: [{ label: '新算法之外 PV', duration: '05:52', src: 'https://portfolio-videos-1341078655.cos.ap-guangzhou.myqcloud.com/comic-drama.mp4', poster: '/assets/covers/comic-drama.webp' }],
     steps: [
       { title: '故事剧本构思与 LLM 优化', desc: '有一个故事剧本的思路，让 LLM 进行优化，完善剧情结构、角色对话和场景描述，形成可用于分镜的完整剧本。' },
       { title: '资产制作（角色 / 场景 / 道具）', desc: '根据故事内容制作所需资产：角色形象、场景环境、道具物品，使用 AI 图像生成工具快速产出初版视觉资产。' },
@@ -146,7 +146,7 @@ export const projects = [
     year: '2025 — 2026', role: 'AI 视频 / 风格化渲染', tools: ['AI 视频生成', 'After Effects'],
     meta: ['风格化短剧'],
     cover: '/assets/covers/ue5-short.webp',
-    videos: [{ label: 'UE5 渲染风格短剧', duration: '02:23', src: '/videos/ue5-short.mp4', poster: '/assets/covers/ue5-short.webp' }],
+    videos: [{ label: 'UE5 渲染风格短剧', duration: '02:23', src: 'https://portfolio-videos-1341078655.cos.ap-guangzhou.myqcloud.com/ue5-short.mp4', poster: '/assets/covers/ue5-short.webp' }],
     steps: null, assetGroups: [],
   },
   {
