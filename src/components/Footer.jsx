@@ -3,11 +3,6 @@ import { profile } from '../data/profile';
 const RESUME_HREF = encodeURI('/AI视频设计师-Kerwin.pdf');
 
 export default function Footer() {
-  const toTop = (e) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   const rows = [
     { k: 'PHONE / 电话', v: profile.phone, href: `tel:${profile.phone}` },
     { k: 'EMAIL / 邮箱', v: profile.email, href: `mailto:${profile.email}` },
@@ -53,7 +48,6 @@ export default function Footer() {
 
       <div className="contact-foot">
         <span>© 2026 {profile.name} · AI Video Designer · 深圳</span>
-        <a href="#top" onClick={toTop}>Back to top ↑</a>
       </div>
     </footer>
   );
