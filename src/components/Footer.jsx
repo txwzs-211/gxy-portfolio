@@ -15,9 +15,9 @@ export default function Footer() {
         <div className="contact-left">
           <span className="mini-kicker">CONTACT</span>
           <h2 className="contact-slogan">
-            LET&apos;S BUILD<br />
-            BETTER <span className="hl">V</span>ISUAL<br />
-            SYSTEMS<span className="sec-arrow">↘</span>
+            <span>LET&apos;S BUILD</span>
+            <span>BETTER <span className="hl">V</span>ISUAL</span>
+            <span>SYSTEMS<span className="sec-arrow">↘</span></span>
           </h2>
           <p className="contact-lead">期待用 AI 与你一起，打造更有视觉冲击力的动态内容。</p>
           <div className="contact-actions">
