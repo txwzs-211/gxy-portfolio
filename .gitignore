@@ -1,0 +1,19 @@
+# 依赖
+node_modules/
+
+# 构建产物（托管平台会自动重新构建，无需提交）
+dist/
+
+# 临时素材与参考文件（不进仓库）
+_scratch/
+_refs/
+
+# WorkBuddy 项目记忆（私有）
+.workbuddy/
+
+# 系统/编辑器杂项
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/

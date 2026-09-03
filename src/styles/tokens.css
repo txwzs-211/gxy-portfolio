@@ -1,0 +1,107 @@
+:root {
+  color-scheme: dark;
+  /* V3: 荧光酸性绿 × 暖黑 —— 对齐参考视觉 */
+  --bg: #0a0c08;
+  --bg-2: #0e110b;
+  --bg-3: #151a10;
+  --panel: rgba(20, 25, 15, 0.72);
+  --panel-solid: #12160e;
+  --line: rgba(255, 255, 255, 0.08);
+  --line-hover: rgba(200, 247, 59, 0.35);
+
+  --text: #f2f6ea;
+  --muted: rgba(242, 246, 234, 0.62);
+  --faint: rgba(242, 246, 234, 0.34);
+
+  /* 主色：荧光酸性绿 */
+  --accent: #c8f73b;
+  --accent-soft: #dcff6a;
+  --accent-dim: #97c827;
+  --accent-glow: rgba(200, 247, 59, 0.20);
+  --accent-glow-strong: rgba(200, 247, 59, 0.42);
+  --on-accent: #0c0f06; /* 压在荧光绿实心块上的深色文字 */
+
+  /* 辅助色：少量冷紫做 3D 装饰 / 渐变层次 */
+  --cyan: #9fe04b;
+  --cyan-glow: rgba(159, 224, 75, 0.28);
+  --magenta: #8b7cf6;
+  --magenta-glow: rgba(139, 124, 246, 0.30);
+  --purple: #a78bfa;
+  --purple-glow: rgba(167, 139, 250, 0.30);
+
+  /* WarpTunnel 色环 — 绿系为主、一点紫 */
+  --warp-1: #c8f73b;
+  --warp-2: #9fe04b;
+  --warp-3: #a78bfa;
+  --warp-4: #dcff6a;
+
+  /* legacy 别名 */
+  --green: var(--accent);
+  --green-soft: var(--accent-soft);
+  --green-dim: var(--accent-dim);
+  --green-glow: var(--accent-glow);
+  --green-glow-strong: var(--accent-glow-strong);
+  --accent-cyan: var(--cyan);
+  --accent-pink: var(--magenta);
+
+  --red: #f43f5e;
+  --gold: #fbbf24;
+  --radius: 18px;
+  --radius-sm: 11px;
+  --radius-lg: 26px;
+  --max: 1700px;
+
+  /* 字体：展示标题用更几何的 Space Grotesk，失败回退 Inter */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Microsoft YaHei", "PingFang SC", sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Space Grotesk", "Inter", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Microsoft YaHei", sans-serif;
+
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  background-image:
+    radial-gradient(ellipse 75% 55% at 18% -5%, rgba(159, 224, 75, 0.10), transparent 55%),
+    radial-gradient(ellipse 70% 55% at 50% 108%, rgba(200, 247, 59, 0.06), transparent 60%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+/* 文本选中 — 荧光绿 */
+::selection {
+  background: rgba(200, 247, 59, 0.32);
+  color: #ffffff;
+}
+
+/* 键盘焦点 — 无障碍可见性 */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, rgba(200, 247, 59, 0.55), rgba(159, 224, 75, 0.35));
+  border-radius: 5px;
+  border: 2px solid var(--bg);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }

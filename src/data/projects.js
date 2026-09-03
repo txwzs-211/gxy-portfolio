@@ -1,0 +1,259 @@
+/**
+ * 项目数据（内容唯一数据源）
+ * ------------------------------------------------------------------
+ * 分类 / 项目清单以飞书《AIGC全链路Portfolio | 吴坤焱》为准。
+ * 成片视频均取自飞书知识库原片（1080p/720p 流转码版），封面为视频抽帧。
+ *
+ * 每个项目：
+ * {
+ *   category  大类 id（见 categories）
+ *   slug      路由 #/work/:slug
+ *   num/title/eyebrow/desc/year/role/tools/meta
+ *   cover     列表封面；null = 素材待补（前端渲染占位，不显示破图）
+ *   videos    成片列表 [{label,duration,src,poster,portrait}]；src 为 null 表示视频待补
+ *   steps     制作流程文字（可空）
+ *   assetGroups 有序资产分区：
+ *     平铺 {id,kind,title,images:[url]}
+ *     角色 {id,kind:'character',title,characters:[{name,desc,images}]}
+ * }
+ */
+
+const drama = (i) => `/assets/gallery/drama/drama-${String(i).padStart(2, '0')}.webp`;
+const ball = (i) => `/assets/gallery/basketball/basketball-${String(i).padStart(2, '0')}.webp`;
+const frame = (i) => `/assets/gallery/design/frame-${String(i).padStart(2, '0')}.webp`;
+const poster = (n) => `/assets/posters/${n}.webp`;
+const seq = (a, b, fn) => Array.from({ length: b - a + 1 }, (_, k) => fn(a + k));
+
+/* 大类（列表按此顺序分组） */
+export const categories = [
+  { id: 'game', label: 'AI 游戏动画 PV', en: 'Game Animation PV' },
+  { id: 'drama', label: 'AI 影视 / 短剧', en: 'Film & Short Drama' },
+  { id: 'commercial', label: '商业产品宣传', en: 'Commercial' },
+  { id: 'ui', label: 'UI 视觉设计', en: 'UI / Visual Design' },
+];
+
+export const projects = [
+  /* ===================== AI 游戏动画 PV ===================== */
+  {
+    num: '01', category: 'game', slug: 'nba-duel',
+    eyebrow: 'Sports / Motion Key Visual',
+    title: 'NBA 巅峰对决 · 动画 PV',
+    desc: '以赛事入场、球队精神和高能灯光为核心，构建具备冲击力的体育视觉包装，覆盖球员角色设定、球馆舞台场景到分镜关键帧，适合游戏、短视频与活动大屏场景。含主动画 PV 与球员出场包装两支成片。',
+    year: '2025 — 2026', role: 'AI 视频 / 动态视觉包装',
+    tools: ['Midjourney', 'AI 视频生成', 'After Effects', 'Premiere'],
+    meta: ['体育视觉', '出场包装', '动态分镜'],
+    cover: '/assets/covers/nba-duel.webp',
+    videos: [
+      { label: 'NBA 巅峰对决动画 PV', duration: '00:44', src: '/videos/hero-reel.mp4', poster: '/assets/covers/nba-duel.webp' },
+      { label: '球员出场动画', duration: '00:29', src: '/videos/nba-player-intro.mp4', poster: poster('nba-player-intro') },
+    ],
+    steps: null,
+    assetGroups: [
+      { id: 'method', kind: 'method', title: '策略拆解与制作规范', images: [ball(2), ball(3), ball(4), ball(5), ball(6), ball(19)] },
+      {
+        id: 'characters', kind: 'character', title: '角色资产 · 球员设定',
+        characters: [
+          { name: '德里克·罗斯', desc: '角色定装 / 四视图 / 表情动作设定表', images: [ball(7), ball(8), ball(9)] },
+        ],
+      },
+      { id: 'scenes', kind: 'scene', title: '场景资产 · 球馆舞台', images: seq(10, 18, ball) },
+      { id: 'frames', kind: 'frame', title: '主视觉与分镜关键帧', images: [ball(1), ball(20), ball(21)] },
+    ],
+  },
+  {
+    num: '02', category: 'game', slug: 'football-manager',
+    eyebrow: 'Game PV',
+    title: '足球经理人 2 · PV',
+    desc: '足球经营类游戏的动画宣传 PV，以赛事氛围、球员高光与节奏剪辑呈现游戏卖点。',
+    year: '2025 — 2026', role: 'AI 视频 / 动态视觉包装', tools: ['AI 视频生成', 'After Effects', 'Premiere'],
+    meta: ['游戏 PV'],
+    cover: '/assets/covers/football-manager.webp',
+    videos: [{ label: '足球经理人 PV', duration: '01:25', src: '/videos/football-manager.mp4', poster: '/assets/covers/football-manager.webp' }],
+    steps: null, assetGroups: [],
+  },
+  {
+    num: '03', category: 'game', slug: 'seven-days',
+    eyebrow: 'Game PV',
+    title: '七日世界 · PV',
+    desc: '末日开放世界题材游戏宣传 PV，强调氛围营造、世界观铺陈与高能镜头节奏。',
+    year: '2025 — 2026', role: 'AI 视频 / 动态视觉包装', tools: ['AI 视频生成', 'After Effects', 'Premiere'],
+    meta: ['游戏 PV'],
+    cover: '/assets/covers/seven-days.webp',
+    videos: [{ label: '七日世界 PV', duration: '06:51', src: '/videos/seven-days.mp4', poster: '/assets/covers/seven-days.webp' }],
+    steps: null, assetGroups: [],
+  },
+
+  /* ===================== AI 影视 / 短剧 ===================== */
+  {
+    num: '04', category: 'drama', slug: 'mermaid',
+    eyebrow: 'Short Drama / AI Production',
+    title: '海外真人短剧 · 美人鱼',
+    desc: '围绕短剧角色、场景氛围与标题视觉进行创作，探索 AI 辅助影视前期、角色设定和宣传物料生产。从剧本拆解到成片输出，全流程展示 AI 真人短剧的工业化制作方法。',
+    year: '2025 — 2026',
+    role: '剧本拆解 / 角色场景资产 / AI 视频 / 后期',
+    tools: ['ComfyUI', '多参考图视频', 'After Effects', 'Premiere'],
+    meta: ['短剧制作', '角色设定', '海报视觉', 'AI视频生成'],
+    cover: '/assets/covers/mermaid.webp',
+    videos: [{ label: '海外美人鱼短剧（成片 · 竖屏）', duration: '10:41', src: '/videos/drama-mermaid.mp4', poster: '/assets/covers/mermaid.webp', portrait: true }],
+    steps: [
+      { title: '剧本拆解与分镜设计', desc: '将完整剧本按场景拆解为分镜脚本，标注镜头类型、运镜方式、角色情绪和关键动作，形成可执行的生成清单。' },
+      { title: '角色设定与 AI 资产产出', desc: '使用 AI 图像生成工具进行角色形象设计，输出多角度、多表情的角色参考图，确保前后镜头角色一致性。' },
+      { title: '场景氛围与道具资产', desc: '根据剧本场景需求，生成环境氛围图和关键道具资产，统一视觉风格与色调，为视频生成提供参考基础。' },
+      { title: 'AI 视频生成与迭代优化', desc: '使用多参考图生成视频的方法，将角色和场景资产转化为动态片段，边生成边优化提示词，控制画面质量和一致性。' },
+      { title: '后期剪辑与成片输出', desc: '将生成的视频素材进行剪辑、调色、转场，配合配乐、音效和字幕，输出最终的商用级短剧成片。' },
+    ],
+    assetGroups: [
+      { id: 'method', kind: 'method', title: '制作规范与流程方法论', images: seq(2, 8, drama).concat([drama(22)]) },
+      {
+        id: 'characters', kind: 'character', title: '角色资产 · 多视角一致性',
+        characters: [
+          { name: '男主角', desc: '定装参考 + 标准四视图', images: [drama(9), drama(10)] },
+          { name: '女主角', desc: '定装参考 + 标准四视图', images: [drama(11), drama(12)] },
+          { name: '红裙女配角', desc: '定装参考 + 标准四视图', images: [drama(13), drama(14)] },
+          { name: '护士', desc: '定装参考 + 标准四视图', images: [drama(15), drama(16)] },
+        ],
+      },
+      { id: 'scenes', kind: 'scene', title: '场景资产 · 病房空间', images: seq(17, 21, drama) },
+      { id: 'frames', kind: 'frame', title: '标题视觉与分镜关键帧', images: [drama(1), drama(23)] },
+    ],
+  },
+  {
+    num: '05', category: 'drama', slug: 'comic-drama',
+    eyebrow: 'Comic Drama / AI Production',
+    title: 'AI 漫剧 PV · 新算法之外',
+    desc: '从故事构思、资产制作到 AI 视频生成与后期剪辑，完整展示 AI 辅助漫剧制作的全流程方法论。',
+    year: '2025 — 2026',
+    role: '编剧 / 资产 / AI 视频 / 后期全流程',
+    tools: ['LLM 剧本', 'AI 生图', '多参考图视频', 'Premiere'],
+    meta: ['漫剧制作', 'AI生图', '多参视频'],
+    cover: '/assets/covers/comic-drama.webp',
+    videos: [{ label: '新算法之外 PV', duration: '05:52', src: '/videos/comic-drama.mp4', poster: '/assets/covers/comic-drama.webp' }],
+    steps: [
+      { title: '故事剧本构思与 LLM 优化', desc: '有一个故事剧本的思路，让 LLM 进行优化，完善剧情结构、角色对话和场景描述，形成可用于分镜的完整剧本。' },
+      { title: '资产制作（角色 / 场景 / 道具）', desc: '根据故事内容制作所需资产：角色形象、场景环境、道具物品，使用 AI 图像生成工具快速产出初版视觉资产。' },
+      { title: '资产高清化与纯色背景处理', desc: '将生成的资产进行高清放大处理，并去除背景替换为纯色，使其成为可复用的标准化资产素材。' },
+      { title: '剧本转分镜提示词 + 多参视频生成', desc: '将剧本拆解为分镜提示词，使用多参考图生成视频的方法，将静态资产转化为动态视频片段。' },
+      { title: '边生成边优化提示词', desc: '在视频生成过程中持续迭代优化提示词，根据生成效果调整参数，逐步提升画面质量和一致性。' },
+      { title: '后期剪辑、配乐与音效', desc: '将所有生成的视频素材进行后期剪辑，添加配乐、音效和字幕，完成最终的漫剧成片输出。' },
+    ],
+    assetGroups: [],
+  },
+  {
+    num: '06', category: 'drama', slug: 'ue5-short',
+    eyebrow: 'Short Drama / UE5 Style',
+    title: 'UE5 渲染风格短剧',
+    desc: '以 UE5 级实时渲染质感为目标的风格化短剧片段，探索 AI 生成高保真游戏引擎画面风格的可行性。',
+    year: '2025 — 2026', role: 'AI 视频 / 风格化渲染', tools: ['AI 视频生成', 'After Effects'],
+    meta: ['风格化短剧'],
+    cover: '/assets/covers/ue5-short.webp',
+    videos: [{ label: 'UE5 渲染风格短剧', duration: '02:23', src: '/videos/ue5-short.mp4', poster: '/assets/covers/ue5-short.webp' }],
+    steps: null, assetGroups: [],
+  },
+  {
+    num: '07', category: 'drama', slug: 'comic-ops',
+    eyebrow: 'Comic Drama / Operation',
+    title: 'AI 漫剧运营视频',
+    desc: '面向运营投放的多支短内容片段，覆盖剧情切片、场景展示与道具转场等形式，含横屏剧情切片与两支竖屏内容。',
+    year: '2025 — 2026', role: 'AI 视频 / 运营内容', tools: ['AI 视频生成', 'Premiere'], meta: ['运营视频', '竖屏内容'],
+    cover: '/assets/covers/comic-ops.webp',
+    videos: [
+      { label: '剧情切片', duration: '00:28', src: '/videos/comic-ops-clip.mp4', poster: '/assets/covers/comic-ops.webp' },
+      { label: '航船展示（竖屏）', duration: '00:40', src: '/videos/comic-ops-scene.mp4', poster: poster('comic-ops-scene'), portrait: true },
+      { label: '道具转场（竖屏）', duration: '00:34', src: '/videos/comic-ops-transition.mp4', poster: poster('comic-ops-transition'), portrait: true },
+    ],
+    steps: null, assetGroups: [],
+  },
+
+  /* ===================== 商业产品宣传 ===================== */
+  {
+    num: '08', category: 'commercial', slug: 'base-promo',
+    eyebrow: 'Commercial / Product',
+    title: 'basa 车载支架 · 产品宣传',
+    desc: 'basa 随心角度车载支架 2025 年度新品竖屏宣传短片，围绕悬浮呼吸灯、任意折弯、横竖可用、狂抖不掉四大卖点，结合车内实景演示快速建立产品认知。',
+    year: '2025 — 2026', role: 'AI 视频 / 商业剪辑', tools: ['AI 视频生成', 'Premiere', 'After Effects'],
+    meta: ['产品宣传', '车载支架', '竖屏'],
+    cover: '/assets/covers/base-promo.webp',
+    videos: [{ label: 'basa 车载支架产品宣传（竖屏）', duration: '00:32', src: '/videos/base-promo.mp4', poster: '/assets/covers/base-promo.webp', portrait: true }],
+    steps: null, assetGroups: [],
+  },
+  {
+    num: '09', category: 'commercial', slug: 'skyworth-night',
+    eyebrow: 'Commercial / Hardware',
+    title: '创维 · 极黑光',
+    desc: '创维摄像头「极黑光」低照成像能力的硬件宣传短片，用夜景实拍感画面突出夜视卖点。',
+    year: '2025 — 2026', role: 'AI 视频 / 商业剪辑', tools: ['AI 视频生成', 'Premiere'],
+    meta: ['硬件宣传'],
+    cover: '/assets/covers/skyworth-night.webp',
+    videos: [{ label: '创维极黑光 · 全彩夜视', duration: '01:10', src: '/videos/skyworth-night.mp4', poster: '/assets/covers/skyworth-night.webp' }],
+    steps: null, assetGroups: [],
+  },
+  {
+    num: '10', category: 'commercial', slug: 'skyworth-c40',
+    eyebrow: 'Commercial / Hardware',
+    title: '创维海外摄像头 · C40',
+    desc: '面向海外市场的创维 C40 摄像头产品宣传片，覆盖外观、画质与多场景应用展示。',
+    year: '2025 — 2026', role: 'AI 视频 / 商业剪辑', tools: ['AI 视频生成', 'Premiere', 'After Effects'],
+    meta: ['海外硬件宣传'],
+    cover: '/assets/covers/skyworth-c40.webp',
+    videos: [{ label: '创维海外摄像头 C40 · 红外夜视', duration: '00:45', src: '/videos/skyworth-c40.mp4', poster: '/assets/covers/skyworth-c40.webp' }],
+    steps: null, assetGroups: [],
+  },
+
+  /* ===================== UI 视觉设计 ===================== */
+  {
+    num: '11', category: 'ui', slug: 'design-showcase',
+    eyebrow: 'AIGC / Visual Design',
+    title: 'UI 视觉设计作品集',
+    desc: '覆盖 AIGC 营销活动设计、小程序体验设计、IP LoRA 资产、游戏美术图标与品牌内容延展，强调从概念到可落地视觉系统的完整表达。',
+    year: '2024 — 2026', role: 'AIGC 视觉 / 体验设计 / 游戏美术',
+    tools: ['ComfyUI / LoRA', 'Figma', 'Photoshop', 'AI 生图'],
+    meta: ['AI视觉', '品牌延展', 'UI资产'],
+    cover: '/assets/covers/design-showcase.webp',
+    videos: [],
+    steps: null,
+    assetGroups: [
+      { id: 'ui', kind: 'gallery', title: '体验设计案例 · 礼在小程序', images: seq(1, 23, frame) },
+      {
+        id: 'ip', kind: 'character', title: 'IP 资产 · 驯鹿 LoRA 模型',
+        characters: [
+          { name: '驯鹿 IP', desc: '数字资产库 / 情景适配 / 模型炼制与实战', images: seq(24, 27, frame) },
+        ],
+      },
+      { id: 'marketing', kind: 'gallery', title: 'AIGC 营销与硬件渠道视觉', images: seq(28, 41, frame).concat([frame(43), frame(52), frame(53)]) },
+      { id: 'gameart', kind: 'gallery', title: '游戏美术 · 图标 / 界面 / 插画', images: [frame(42), ...seq(44, 51, frame)] },
+    ],
+  },
+];
+
+/* ---- 查询工具 ---- */
+export function getProjectBySlug(slug) {
+  return projects.find((p) => p.slug === slug) || null;
+}
+export function getProjectIndex(slug) {
+  return projects.findIndex((p) => p.slug === slug);
+}
+export function getAdjacentProjects(slug) {
+  const i = getProjectIndex(slug);
+  if (i < 0) return { prev: null, next: null };
+  return {
+    prev: i > 0 ? projects[i - 1] : null,
+    next: i < projects.length - 1 ? projects[i + 1] : null,
+  };
+}
+export function countAssets(project) {
+  let n = 0;
+  (project.assetGroups || []).forEach((g) => {
+    if (g.images) n += g.images.length;
+    if (g.characters) g.characters.forEach((c) => { n += (c.images || []).length; });
+  });
+  return n;
+}
+/* 是否还有待补素材（封面或任一可用成片缺失） */
+export function isProjectPending(project) {
+  if (!project.cover) return true;
+  const vids = project.videos || [];
+  return vids.length > 0 && vids.every((v) => !v.src);
+}
+export function readyVideoCount(project) {
+  return (project.videos || []).filter((v) => v.src).length;
+}
