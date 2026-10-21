@@ -28,7 +28,6 @@ const seq = (a, b, fn) => Array.from({ length: b - a + 1 }, (_, k) => fn(a + k))
 export const categories = [
   { id: 'game', label: 'AI 游戏动画 PV', en: 'Game Animation PV' },
   { id: 'drama', label: 'AI 影视 / 短剧', en: 'Film & Short Drama' },
-  { id: 'commercial', label: '商业产品宣传', en: 'Commercial' },
   { id: 'ui', label: 'UI 视觉设计', en: 'UI / Visual Design' },
 ];
 
@@ -164,44 +163,9 @@ export const projects = [
     steps: null, assetGroups: [],
   },
 
-  /* ===================== 商业产品宣传 ===================== */
-  {
-    num: '08', category: 'commercial', slug: 'base-promo',
-    eyebrow: 'Commercial / Product',
-    title: 'basa 车载支架 · 产品宣传',
-    desc: 'basa 随心角度车载支架 2025 年度新品竖屏宣传短片，围绕悬浮呼吸灯、任意折弯、横竖可用、狂抖不掉四大卖点，结合车内实景演示快速建立产品认知。',
-    year: '2025 — 2026', role: 'AI 视频 / 商业剪辑', tools: ['AI 视频生成', 'Premiere', 'After Effects'],
-    meta: ['产品宣传', '车载支架', '竖屏'],
-    cover: '/assets/covers/base-promo.webp',
-    videos: [{ label: 'basa 车载支架产品宣传（竖屏）', duration: '00:32', src: '/videos/base-promo.mp4', poster: '/assets/covers/base-promo.webp', portrait: true }],
-    steps: null, assetGroups: [],
-  },
-  {
-    num: '09', category: 'commercial', slug: 'skyworth-night',
-    eyebrow: 'Commercial / Hardware',
-    title: '创维 · 极黑光',
-    desc: '创维摄像头「极黑光」低照成像能力的硬件宣传短片，用夜景实拍感画面突出夜视卖点。',
-    year: '2025 — 2026', role: 'AI 视频 / 商业剪辑', tools: ['AI 视频生成', 'Premiere'],
-    meta: ['硬件宣传'],
-    cover: '/assets/covers/skyworth-night.webp',
-    videos: [{ label: '创维极黑光 · 全彩夜视', duration: '01:10', src: '/videos/skyworth-night.mp4', poster: '/assets/covers/skyworth-night.webp' }],
-    steps: null, assetGroups: [],
-  },
-  {
-    num: '10', category: 'commercial', slug: 'skyworth-c40',
-    eyebrow: 'Commercial / Hardware',
-    title: '创维海外摄像头 · C40',
-    desc: '面向海外市场的创维 C40 摄像头产品宣传片，覆盖外观、画质与多场景应用展示。',
-    year: '2025 — 2026', role: 'AI 视频 / 商业剪辑', tools: ['AI 视频生成', 'Premiere', 'After Effects'],
-    meta: ['海外硬件宣传'],
-    cover: '/assets/covers/skyworth-c40.webp',
-    videos: [{ label: '创维海外摄像头 C40 · 红外夜视', duration: '00:45', src: '/videos/skyworth-c40.mp4', poster: '/assets/covers/skyworth-c40.webp' }],
-    steps: null, assetGroups: [],
-  },
-
   /* ===================== UI 视觉设计 ===================== */
   {
-    num: '11', category: 'ui', slug: 'design-showcase',
+    num: '08', category: 'ui', slug: 'design-showcase',
     eyebrow: 'AIGC / Visual Design',
     title: 'UI 视觉设计作品集',
     desc: '覆盖 AIGC 营销活动设计、小程序体验设计、IP LoRA 资产、游戏美术图标与品牌内容延展，强调从概念到可落地视觉系统的完整表达。',
