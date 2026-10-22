@@ -194,7 +194,7 @@ export const projects = [
     eyebrow: 'Game Gacha Reveal',
     title: '足球经理人2 · 球星抽卡登场',
     desc: '游戏抽卡演出动画，以「出金预告 → 通道身份揭秘 → 球星亮相」三幕结构推进：球员通道内按荷兰国旗 → POSITION/CB → Liverpool 队徽的顺序自然解锁身份，最终舞台聚光定格，完成从神秘背影到完整球星的情绪释放。',
-    year: '2025 — 2026', role: 'AI 视频 / 抽卡演出与后期包装', tools: ['AI 视频生成', 'ComfyUI', 'Premiere', 'After Effects'],
+    year: '2026', role: 'AI 视频 / 抽卡演出与后期包装', tools: ['AI 视频生成', 'ComfyUI', 'Premiere', 'After Effects'],
     meta: ['游戏抽卡', '身份解锁', '电影化运镜'],
     cover: '/assets/covers/fm-gacha.webp',
     videos: [{ label: '球星抽卡登场', duration: '00:31', src: '/videos/fm2-gacha.mp4', poster: '/assets/covers/fm-gacha.webp' }],
