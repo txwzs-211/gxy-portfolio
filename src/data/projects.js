@@ -89,8 +89,8 @@ export const projects = [
         images: ['/assets/gallery/football-manager-pv/scene-1.webp', '/assets/gallery/football-manager-pv/scene-2.webp', '/assets/gallery/football-manager-pv/scene-3.webp', '/assets/gallery/football-manager-pv/scene-4.webp', '/assets/gallery/football-manager-pv/scene-5.webp', '/assets/gallery/football-manager-pv/scene-6.webp'],
       },
       {
-        id: 'props', kind: 'gallery', title: '道具资产',
-        images: ['/assets/gallery/football-manager-pv/prop.webp'],
+        id: 'props', kind: 'gallery', title: '道具资产 · 球员卡 / LOGO',
+        images: ['/assets/gallery/football-manager-pv/prop.webp', '/assets/gallery/football-manager-pv/logo.webp'],
       },
     ],
   },
