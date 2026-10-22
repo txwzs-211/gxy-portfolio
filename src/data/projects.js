@@ -187,6 +187,25 @@ export const projects = [
       { id: 'gameart', kind: 'gallery', title: '游戏美术 · 图标 / 界面 / 插画', images: [frame(42), ...seq(44, 51, frame)] },
     ],
   },
+
+  /* ===================== 游戏抽卡演出（新增） ===================== */
+  {
+    num: '09', category: 'game', slug: 'fm2-gacha',
+    eyebrow: 'Game Gacha Reveal',
+    title: '足球经理人2 · 球星抽卡登场',
+    desc: '游戏抽卡演出动画，以「出金预告 → 通道身份揭秘 → 球星亮相」三幕结构推进：球员通道内按荷兰国旗 → POSITION/CB → Liverpool 队徽的顺序自然解锁身份，最终舞台聚光定格，完成从神秘背影到完整球星的情绪释放。',
+    year: '2025 — 2026', role: 'AI 视频 / 抽卡演出', tools: ['AI 视频生成', 'Premiere', 'After Effects'],
+    meta: ['游戏抽卡', '身份解锁', '电影化运镜'],
+    cover: '/assets/covers/fm-gacha.webp',
+    videos: [{ label: '球星抽卡登场', duration: '00:31', src: '/videos/fm2-gacha.mp4', poster: '/assets/covers/fm-gacha.webp' }],
+    steps: [
+      { title: '前期定调 · 三幕情绪结构', desc: '明确「出金预告 → 通道揭秘 → 亮相定格」的情绪曲线，先锁主参考图（MRI）与环境光板，统一跨镜头的服装、材质与光影基调。' },
+      { title: '资产工程 · 分镜脚本', desc: '产出角色正 / 侧 / 表情三视角、关键道具与场景板；按景别、主体动作、运镜、情绪、时长、上屏文字六要素写分镜，遵循一镜一动作一运镜。' },
+      { title: 'Draft 验证 · 两遍渲染', desc: '先用低分辨率草稿验证叙事逻辑、角色一致性与情绪到位；锁定 prompt 与 seed 后用 1080P 重新推理终渲，高潮镜头可上 4K，而非直接把低清拉高清。' },
+      { title: '剪辑合成 · 音效调色', desc: '粗剪拼合后按情绪曲线精调节奏，抽卡音与角色登场音卡在情绪点；角色名、稀有度、Logo 一律后期叠加，统一调色后按投放平台规格导出。' },
+    ],
+    assetGroups: [],
+  },
 ];
 
 /* ---- 查询工具 ---- */
