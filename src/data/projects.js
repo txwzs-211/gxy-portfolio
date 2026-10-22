@@ -254,6 +254,59 @@ export const projects = [
       },
     ],
   },
+  {
+    num: '10', category: 'game', slug: 'bm2-gacha',
+    eyebrow: 'Game Gacha Reveal · Basketball',
+    title: '篮球大师2 · 球星抽卡登场',
+    desc: '篮球题材游戏抽卡演出动画，以「卡牌亮相 → 球馆斗屏造势 → 球员通道揭秘 → 科技感展台聚光定格」推进：罗斯球员卡从翻牌到立绘，配合球馆全景与火花氛围，最终在科技舞台完成球星登场的情绪释放。',
+    year: '2026', role: 'AI 视频 / 抽卡演出与后期包装', tools: ['AI 视频生成', 'ComfyUI', 'Premiere', 'After Effects'],
+    meta: ['游戏抽卡', '球星亮相', '科技感舞台'],
+    cover: '/assets/covers/bm2-gacha.webp',
+    videos: [{ label: '球星抽卡登场', duration: '00:21', src: '/videos/bm2-gacha.mp4', poster: '/assets/covers/bm2-gacha.webp' }],
+    steps: [
+      { title: '前期定调 · 三幕情绪结构', desc: '明确「卡牌预告 → 通道揭秘 → 亮相定格」的情绪曲线，先锁主参考图（MRI）与环境光板，统一跨镜头的球衣、材质与光影基调。' },
+      { title: '资产工程 · 分镜脚本', desc: '产出角色参考、斗屏 / 球馆 / 通道 / 展台场景板与球星卡道具；按景别、主体动作、运镜、情绪、时长、上屏文字写分镜，遵循一镜一动作一运镜。' },
+      { title: 'Draft 验证 · 两遍渲染', desc: '先用低分辨率草稿验证叙事逻辑、角色一致性与情绪到位；锁定 prompt 与 seed 后用 1080P 重新推理终渲，高潮镜头可上 4K，而非直接把低清拉高清。' },
+      { title: '剪辑合成 · 音效调色', desc: '粗剪拼合后按情绪曲线精调节奏，翻牌音与登场音卡在情绪点；球员名、稀有度、Logo 一律后期叠加，统一调色后按投放平台规格导出。' },
+    ],
+    assetGroups: [
+      {
+        id: 'char', kind: 'character', title: '角色资产 · 罗斯球员设定',
+        characters: [
+          { name: '罗斯', desc: '人物主参考 / AI 生成设定 / 多视角一致性', images: ['/assets/gallery/bm2-gacha/char-1.webp', '/assets/gallery/bm2-gacha/char-2.webp', '/assets/gallery/bm2-gacha/char-3.webp'] },
+        ],
+      },
+      {
+        id: 'scenes', kind: 'scene', title: '场景资产 · 球馆全景 / 球员通道 / 科技展台',
+        images: [
+          '/assets/gallery/bm2-gacha/scene-arena-1.webp',
+          '/assets/gallery/bm2-gacha/scene-arena-spark.webp',
+          '/assets/gallery/bm2-gacha/scene-tunnel.webp',
+          '/assets/gallery/bm2-gacha/scene-stage-4.webp',
+          '/assets/gallery/bm2-gacha/scene-stage-platform.webp',
+          '/assets/gallery/bm2-gacha/scene-stage-0722.webp',
+        ],
+      },
+      {
+        id: 'props', kind: 'gallery', title: '道具资产 · 罗斯卡牌 / 球馆斗屏',
+        images: [
+          '/assets/gallery/bm2-gacha/prop-card-rose.webp',
+          '/assets/gallery/bm2-gacha/prop-dipin-3.webp',
+          '/assets/gallery/bm2-gacha/prop-dipin-ok.webp',
+          '/assets/gallery/bm2-gacha/prop-dipin-closeup.webp',
+        ],
+      },
+      {
+        id: 'frames', kind: 'frame', title: '分镜关键帧',
+        images: [
+          '/assets/gallery/bm2-gacha/frame-8.webp',
+          '/assets/gallery/bm2-gacha/frame-0217.webp',
+          '/assets/gallery/bm2-gacha/frame-4.webp',
+        ],
+      },
+    ],
+  },
+
 ];
 
 /* ---- 查询工具 ---- */
