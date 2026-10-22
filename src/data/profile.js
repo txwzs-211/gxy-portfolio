@@ -4,7 +4,7 @@ export const profile = {
   title: 'AI 视频设计师 / AIGC 内容生产',
   heroTitle: 'AI 视频设计师',
   heroSubtitle: 'Visual Designer',
-  bio: '覆盖从剧本拆解、分镜设计、AI 视频生成到后期剪辑包装的完整链路；精通 Stable Diffusion / ComfyUI 本地部署与工作流搭建，深谙 LoRA 训练、ControlNet 精控等核心技术。已落地网易、传音控股、腾讯控股等多家企业的 AIGC 生产管线，擅长将碎片化 AI 工具整合为标准化 SOP，大幅提升团队内容产能。',
+  bio: '覆盖剧本镜头拆解、分镜逻辑设计、美术资产生产、AI 视频生成到后期剪辑包装的完整链路，可独立完成动态内容 0 到 1 的商用落地；精通 Stable Diffusion / ComfyUI 本地部署与节点排障，熟练 LoRA 训练、ControlNet 精控与局部重绘，擅长把碎片化 AI 工具整合为标准化 SOP 管线，并用 Python / vibe coding 快速产出自动化脚本与可交互 Demo。',
   phone: '15507586823',
   email: '1103236368@qq.com',
   school: '深圳职业技术大学',
@@ -14,10 +14,10 @@ export const profile = {
 };
 
 export const stats = [
-  { value: '4+', label: '家企业实习落地' },
-  { value: '40%', label: '废片率优化成果' },
-  { value: '500+', label: '日均素材处理量' },
-  { value: '80%', label: '视频完播率提升' },
+  { value: '500+', label: '日均视觉素材批处理' },
+  { value: '60%', label: '人工精修成本降低' },
+  { value: '50%', label: '单图手绘工时缩减' },
+  { value: '45%', label: '团队试错成本降低' },
 ];
 
 export const education = {
@@ -35,6 +35,6 @@ export const certs = [
 
 export const award = {
   title: '全国大学生大广赛 · 短视频赛道',
-  desc: '主导广告视频全流程制作，用 Midjourney 生成场景分镜，效率提升 80%；结合 AI 动效插件完成转绘效果，输出完整商业成片，验证 AIGC 在商业视频中的落地价值。',
+  desc: '主导广告视频全流程制作，用 Midjourney 生成场景分镜，效率提升 80%；结合 AI 动效插件 Deforum 完成转绘效果，输出完整商业成片，验证 AIGC 在商业视频中的落地价值。',
   tags: ['🏆 省级二等奖', 'AIGC 商业视频'],
 };
