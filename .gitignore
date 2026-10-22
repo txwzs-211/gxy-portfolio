@@ -17,3 +17,6 @@ Thumbs.db
 *.log
 .vscode/
 .idea/
+
+# 本地离线备份压缩包（不进仓库）
+backups/
