@@ -68,7 +68,31 @@ export const projects = [
     meta: ['游戏 PV'],
     cover: '/assets/covers/football-manager.webp',
     videos: [{ label: '足球经理人 PV', duration: '01:25', src: '/videos/football-manager.mp4', poster: '/assets/covers/football-manager.webp' }],
-    steps: null, assetGroups: [],
+    steps: null,
+    assetGroups: [
+      {
+        id: 'manager', kind: 'character', title: '人物设定 · 经理人',
+        characters: [
+          { name: '经理人', desc: '正式设定 / 原始参考', images: ['/assets/gallery/football-manager-pv/manager-1.webp', '/assets/gallery/football-manager-pv/manager-2.webp'] },
+        ],
+      },
+      {
+        id: 'stars', kind: 'character', title: '人物设定 · 球星阵容',
+        characters: [
+          { name: '利物浦球星', desc: '萨拉赫 / 格拉文伯奇 / 范戴克 / 麦卡利斯特', images: ['/assets/gallery/football-manager-pv/star-liv-1.webp', '/assets/gallery/football-manager-pv/star-liv-2.webp', '/assets/gallery/football-manager-pv/star-liv-3.webp', '/assets/gallery/football-manager-pv/star-liv-4.webp'] },
+          { name: '埃弗顿球星', desc: '皮纳尔 / 贾吉尔卡 / 贝恩斯 / 耶拉维奇', images: ['/assets/gallery/football-manager-pv/star-evo-1.webp', '/assets/gallery/football-manager-pv/star-evo-2.webp', '/assets/gallery/football-manager-pv/star-evo-3.webp', '/assets/gallery/football-manager-pv/star-evo-4.webp'] },
+          { name: '1960 测试渲染', desc: '球星造型测试稿', images: ['/assets/gallery/football-manager-pv/star-1960-a.webp', '/assets/gallery/football-manager-pv/star-1960-b.webp'] },
+        ],
+      },
+      {
+        id: 'scenes', kind: 'scene', title: '场景资产',
+        images: ['/assets/gallery/football-manager-pv/scene-1.webp', '/assets/gallery/football-manager-pv/scene-2.webp', '/assets/gallery/football-manager-pv/scene-3.webp', '/assets/gallery/football-manager-pv/scene-4.webp', '/assets/gallery/football-manager-pv/scene-5.webp', '/assets/gallery/football-manager-pv/scene-6.webp'],
+      },
+      {
+        id: 'props', kind: 'gallery', title: '道具资产',
+        images: ['/assets/gallery/football-manager-pv/prop.webp'],
+      },
+    ],
   },
   {
     num: '03', category: 'game', slug: 'seven-days',
