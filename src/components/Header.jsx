@@ -31,8 +31,8 @@ export default function Header() {
     <header className="hud-nav-wrap">
       <nav className={`hud-nav${open ? ' is-open' : ''}`}>
         <a href="#/" className="hud-logo" onClick={(e) => goAnchor(e, 'top')}>
-          <img src="/assets/kerwin-avatar.webp" alt="" className="hud-logo-avatar" />
-          <span>KERWIN</span>
+          <img src="/assets/brand-logo.webp" alt="品牌 LOGO" className="hud-logo-avatar" />
+          <span>My Portfolio</span>
         </a>
 
         <ul className="hud-links">
