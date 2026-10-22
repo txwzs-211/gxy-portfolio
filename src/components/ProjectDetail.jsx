@@ -3,6 +3,42 @@ import { getProjectBySlug, getAdjacentProjects } from '../data/projects';
 import AssetGroup from './AssetGroup';
 import ScrollProgress from './ScrollProgress';
 
+// 单个成片：加载失败（远程 COS 不可达 / 格式不支持）时显示海报兜底，而不是黑屏
+function Film({ v, multi }) {
+  const [failed, setFailed] = useState(false);
+
+  if (failed) {
+    return (
+      <figure className={`detail-film-wrap${v.portrait ? ' is-portrait' : ''}`}>
+        {multi && (
+          <figcaption>{v.label}{v.duration ? ` · ${v.duration}` : ''}</figcaption>
+        )}
+        <div className="detail-film-fail" role="alert">
+          {v.poster ? <img src={v.poster} alt={v.label || '视频海报'} /> : null}
+          <p>视频暂时无法加载，请稍后再试</p>
+        </div>
+      </figure>
+    );
+  }
+
+  return (
+    <figure className={`detail-film-wrap${v.portrait ? ' is-portrait' : ''}`}>
+      {multi && (
+        <figcaption>{v.label}{v.duration ? ` · ${v.duration}` : ''}</figcaption>
+      )}
+      <video
+        className={`detail-film${v.portrait ? ' detail-film--portrait' : ''}`}
+        controls playsInline preload="none"
+        poster={v.poster || undefined}
+        onError={() => setFailed(true)}
+      >
+        <source src={v.src} type="video/mp4" onError={() => setFailed(true)} />
+        您的浏览器不支持视频播放。
+      </video>
+    </figure>
+  );
+}
+
 export default function ProjectDetail({ slug }) {
   const project = getProjectBySlug(slug);
   const { prev, next } = getAdjacentProjects(slug);
@@ -97,19 +133,7 @@ export default function ProjectDetail({ slug }) {
             <div className="detail-films">
               {videos.map((v, i) => (
                 v.src ? (
-                  <figure className={`detail-film-wrap${v.portrait ? ' is-portrait' : ''}`} key={i}>
-                    {videos.length > 1 && (
-                      <figcaption>{v.label}{v.duration ? ` · ${v.duration}` : ''}</figcaption>
-                    )}
-                    <video
-                      className={`detail-film${v.portrait ? ' detail-film--portrait' : ''}`}
-                      controls playsInline preload="none"
-                      poster={v.poster || undefined}
-                    >
-                      <source src={v.src} type="video/mp4" />
-                      您的浏览器不支持视频播放。
-                    </video>
-                  </figure>
+                  <Film key={i} v={v} multi={videos.length > 1} />
                 ) : (
                   <div className="detail-film-todo" key={i}>
                     <div className="detail-film-todo-icon" aria-hidden="true">▶</div>

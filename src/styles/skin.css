@@ -235,7 +235,9 @@
 @media (max-width: 560px) {
   .bento-grid { grid-auto-rows: 180px; gap: 12px; }
   .bento-body { padding: 16px 54px 16px 16px; }
-  .hero-x-title .t-line { gap: 12px; }
+  /* 窄屏 Hero 标题：收小字号并允许换行，避免横向裁切 */
+  .hero-x-title { font-size: clamp(38px, 13vw, 64px); overflow-wrap: break-word; }
+  .hero-x-title .t-line { gap: 10px; }
 }
 
 /* =====================================================================

@@ -92,7 +92,17 @@ export default function About() {
             <article
               className={`career-node${i === active ? ' is-active' : ''}`}
               key={i}
+              role="button"
+              tabIndex={0}
+              aria-expanded={i === active}
+              aria-label={`${e.company}，${e.role}`}
               onClick={() => setActive(i)}
+              onKeyDown={(ev) => {
+                if (ev.key === 'Enter' || ev.key === ' ') {
+                  ev.preventDefault();
+                  setActive(i);
+                }
+              }}
             >
               <span className="career-dot" aria-hidden="true">✦</span>
               <span className="career-period">{e.period}</span>

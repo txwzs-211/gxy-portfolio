@@ -66,7 +66,7 @@ export default function Hero() {
     <section id="top" className="hero-x">
       {/* 视频背景 */}
       <div className="hero-x-bg" aria-hidden="true">
-        <video ref={vidRef} loop playsInline preload="auto" poster={profile.heroPoster}>
+        <video ref={vidRef} loop playsInline preload="metadata" poster={profile.heroPoster}>
           <source src={profile.heroVideo} type="video/mp4" />
         </video>
       </div>
