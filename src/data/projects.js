@@ -204,7 +204,31 @@ export const projects = [
       { title: 'Draft 验证 · 两遍渲染', desc: '先用低分辨率草稿验证叙事逻辑、角色一致性与情绪到位；锁定 prompt 与 seed 后用 1080P 重新推理终渲，高潮镜头可上 4K，而非直接把低清拉高清。' },
       { title: '剪辑合成 · 音效调色', desc: '粗剪拼合后按情绪曲线精调节奏，抽卡音与角色登场音卡在情绪点；角色名、稀有度、Logo 一律后期叠加，统一调色后按投放平台规格导出。' },
     ],
-    assetGroups: [],
+    assetGroups: [
+      {
+        id: 'char', kind: 'character', title: '角色资产 · 神秘球员（通用球衣）',
+        characters: [
+          { name: '神秘球员', desc: '通用球衣设定 / 人物主参考 / 多视角一致性', images: ['/assets/gallery/fm-gacha/char-1.webp', '/assets/gallery/fm-gacha/char-2.webp', '/assets/gallery/fm-gacha/char-3.webp'] },
+        ],
+      },
+      {
+        id: 'scenes', kind: 'scene', title: '场景资产 · 球场 / 球员通道 / 亮相舞台 / 更衣室',
+        images: [
+          '/assets/gallery/fm-gacha/scene-stadium-1.webp',
+          '/assets/gallery/fm-gacha/scene-stadium-2.webp',
+          '/assets/gallery/fm-gacha/scene-stadium-3.webp',
+          '/assets/gallery/fm-gacha/scene-tunnel.webp',
+          '/assets/gallery/fm-gacha/stage-drone.webp',
+          '/assets/gallery/fm-gacha/locker-1.webp',
+          '/assets/gallery/fm-gacha/locker-2.webp',
+          '/assets/gallery/fm-gacha/locker-3.webp',
+        ],
+      },
+      {
+        id: 'props', kind: 'gallery', title: '道具资产 · 球员卡剪影',
+        images: ['/assets/gallery/fm-gacha/prop-card.webp'],
+      },
+    ],
   },
 ];
 
