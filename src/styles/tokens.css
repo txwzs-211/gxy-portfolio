@@ -1,39 +1,39 @@
 :root {
   color-scheme: dark;
   /* V3: 荧光酸性绿 × 暖黑 —— 对齐参考视觉 */
-  --bg: #0a0c08;
-  --bg-2: #0e110b;
-  --bg-3: #151a10;
-  --panel: rgba(20, 25, 15, 0.72);
-  --panel-solid: #12160e;
+  --bg: #07070c;
+  --bg-2: #0c0c15;
+  --bg-3: #13131f;
+  --panel: rgba(24, 24, 38, 0.72);
+  --panel-solid: #12121c;
   --line: rgba(255, 255, 255, 0.08);
-  --line-hover: rgba(200, 247, 59, 0.35);
+  --line-hover: rgba(167, 139, 250, 0.35);
 
-  --text: #f2f6ea;
+  --text: #eef0fb;
   --muted: rgba(242, 246, 234, 0.62);
   --faint: rgba(242, 246, 234, 0.34);
 
   /* 主色：荧光酸性绿 */
-  --accent: #c8f73b;
-  --accent-soft: #dcff6a;
-  --accent-dim: #97c827;
-  --accent-glow: rgba(200, 247, 59, 0.20);
-  --accent-glow-strong: rgba(200, 247, 59, 0.42);
-  --on-accent: #0c0f06; /* 压在荧光绿实心块上的深色文字 */
+  --accent: #a5b4fc;
+  --accent-soft: #c7d2fe;
+  --accent-dim: #818cf8;
+  --accent-glow: rgba(165, 180, 252, 0.20);
+  --accent-glow-strong: rgba(165, 180, 252, 0.42);
+  --on-accent: #0b0b16; /* 压在淡蓝紫实心块上的深色文字 */
 
   /* 辅助色：少量冷紫做 3D 装饰 / 渐变层次 */
-  --cyan: #9fe04b;
-  --cyan-glow: rgba(159, 224, 75, 0.28);
+  --cyan: #7dd3fc;
+  --cyan-glow: rgba(125, 211, 252, 0.28);
   --magenta: #8b7cf6;
   --magenta-glow: rgba(139, 124, 246, 0.30);
-  --purple: #a78bfa;
+  --purple: #c4b5fd;
   --purple-glow: rgba(167, 139, 250, 0.30);
 
   /* WarpTunnel 色环 — 绿系为主、一点紫 */
-  --warp-1: #c8f73b;
-  --warp-2: #9fe04b;
+  --warp-1: #a5b4fc;
+  --warp-2: #818cf8;
   --warp-3: #a78bfa;
-  --warp-4: #dcff6a;
+  --warp-4: #7dd3fc;
 
   /* legacy 别名 */
   --green: var(--accent);
@@ -73,8 +73,8 @@
 body {
   background: var(--bg);
   background-image:
-    radial-gradient(ellipse 75% 55% at 18% -5%, rgba(159, 224, 75, 0.10), transparent 55%),
-    radial-gradient(ellipse 70% 55% at 50% 108%, rgba(200, 247, 59, 0.06), transparent 60%);
+    radial-gradient(ellipse 75% 55% at 18% -5%, rgba(125, 211, 252, 0.10), transparent 55%),
+    radial-gradient(ellipse 70% 55% at 50% 108%, rgba(167, 139, 250, 0.07), transparent 60%);
   background-attachment: fixed;
   overflow-x: hidden;
   line-height: 1.5;
@@ -86,7 +86,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* 文本选中 — 荧光绿 */
 ::selection {
-  background: rgba(200, 247, 59, 0.32);
+  background: rgba(165, 180, 252, 0.32);
   color: #ffffff;
 }
 
@@ -100,7 +100,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 ::-webkit-scrollbar { width: 10px; height: 10px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, rgba(200, 247, 59, 0.55), rgba(159, 224, 75, 0.35));
+  background: linear-gradient(180deg, rgba(165, 180, 252, 0.55), rgba(129, 140, 248, 0.35));
   border-radius: 5px;
   border: 2px solid var(--bg);
 }
