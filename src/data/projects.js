@@ -27,7 +27,7 @@ const seq = (a, b, fn) => Array.from({ length: b - a + 1 }, (_, k) => fn(a + k))
 /* 大类（列表按此顺序分组） */
 export const categories = [
   { id: 'game', label: 'AI 游戏动画 PV', en: 'Game Animation PV' },
-  { id: 'gacha', label: '游戏抽卡动画', en: 'Game Gacha Reveal' },
+  { id: 'gacha', label: 'Walkout 球星出场动画', en: 'Walkout Reveal · Gacha' },
   { id: 'drama', label: 'AI 影视 / 短剧', en: 'Film & Short Drama' },
   { id: 'ui', label: 'UI 视觉设计', en: 'UI / Visual Design' },
 ];
@@ -215,11 +215,11 @@ export const projects = [
   /* ===================== 游戏抽卡演出（新增） ===================== */
   {
     num: '09', category: 'gacha', slug: 'fm2-gacha',
-    eyebrow: 'Game Gacha Reveal',
+    eyebrow: 'Walkout Reveal',
     title: '足球经理人2 · 球星抽卡登场',
-    desc: '游戏抽卡演出动画，以「出金预告 → 通道身份揭秘 → 球星亮相」三幕结构推进：球员通道内按荷兰国旗 → POSITION/CB → Liverpool 队徽的顺序自然解锁身份，最终舞台聚光定格，完成从神秘背影到完整球星的情绪释放。',
+    desc: 'Walkout 是卡牌游戏中为高评分（86+）稀有球星触发的特殊电影级出场动画：普通卡牌几乎无铺垫直接出现，Walkout 则用完整悬念序列把期待感拉满，再在高潮揭示大奖。本作以「出金预告 → 球员通道身份揭秘（荷兰国旗 → POSITION/CB → Liverpool 队徽）→ 舞台聚光定格」三幕推进，完成从神秘背影到球星亮相的情绪释放。',
     year: '2026', role: 'AI 视频 / 抽卡演出与后期包装', tools: ['AI 视频生成', 'ComfyUI', 'Premiere', 'After Effects'],
-    meta: ['游戏抽卡', '身份解锁', '电影化运镜'],
+    meta: ['Walkout 出场', '身份解锁', '电影化运镜'],
     cover: '/assets/covers/fm-gacha.webp',
     videos: [{ label: '球星抽卡登场', duration: '00:31', src: '/videos/fm2-gacha.mp4', poster: '/assets/covers/fm-gacha.webp' }],
     steps: [
@@ -256,11 +256,11 @@ export const projects = [
   },
   {
     num: '10', category: 'gacha', slug: 'bm2-gacha',
-    eyebrow: 'Game Gacha Reveal · Basketball',
+    eyebrow: 'Walkout Reveal · Basketball',
     title: '篮球大师2 · 球星抽卡登场',
-    desc: '篮球题材游戏抽卡演出动画，以「卡牌亮相 → 球馆斗屏造势 → 球员通道揭秘 → 科技感展台聚光定格」推进：罗斯球员卡从翻牌到立绘，配合球馆全景与火花氛围，最终在科技舞台完成球星登场的情绪释放。',
+    desc: '以 Walkout 出场为核心的篮球题材卡牌动画：区别于无铺垫的普通抽卡，Walkout 通过完整电影级铺垫，在揭示大奖前制造悬念。本作以「卡牌亮相 → 球馆斗屏造势 → 球员通道揭秘 → 科技感展台聚光定格」推进，罗斯球员卡从翻牌到立绘，配合球馆全景与火花氛围，完成球星登场的情绪释放。',
     year: '2026', role: 'AI 视频 / 抽卡演出与后期包装', tools: ['AI 视频生成', 'ComfyUI', 'Premiere', 'After Effects'],
-    meta: ['游戏抽卡', '球星亮相', '科技感舞台'],
+    meta: ['Walkout 出场', '球星亮相', '科技感舞台'],
     cover: '/assets/covers/bm2-gacha.webp',
     videos: [{ label: '球星抽卡登场', duration: '00:21', src: '/videos/bm2-gacha.mp4', poster: '/assets/covers/bm2-gacha.webp' }],
     steps: [
