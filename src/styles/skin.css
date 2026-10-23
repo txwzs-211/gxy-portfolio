@@ -530,3 +530,10 @@ a.contact-row:hover dd { color: var(--accent); }
   .about-x, .works-x, .strengths-x { opacity: 1; transform: none; transition: none; }
   .back-top { transition: none; }
 }
+
+/* 媒体防下载：禁止图片拖拽、移动端长按保存、媒体内容选中 */
+img, video {
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+}

@@ -29,7 +29,10 @@ function Film({ v, multi }) {
       <video
         className={`detail-film${v.portrait ? ' detail-film--portrait' : ''}`}
         controls playsInline preload="none"
+        controlsList="nodownload noremoteplayback"
+        disablePictureInPicture
         poster={v.poster || undefined}
+        onContextMenu={(e) => e.preventDefault()}
         onError={() => setFailed(true)}
       >
         <source src={v.src} type="video/mp4" onError={() => setFailed(true)} />

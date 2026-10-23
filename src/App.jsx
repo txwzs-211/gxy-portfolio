@@ -24,6 +24,23 @@ export default function App() {
     prevName.current = route.name;
   }, [route]);
 
+  // 媒体防下载：拦截图片/视频上的右键菜单，禁止图片拖拽
+  useEffect(() => {
+    const onContextMenu = (e) => {
+      const t = e.target;
+      if (t && t.closest && t.closest('img, video, audio')) e.preventDefault();
+    };
+    const onDragStart = (e) => {
+      if (e.target && e.target.tagName === 'IMG') e.preventDefault();
+    };
+    document.addEventListener('contextmenu', onContextMenu);
+    document.addEventListener('dragstart', onDragStart);
+    return () => {
+      document.removeEventListener('contextmenu', onContextMenu);
+      document.removeEventListener('dragstart', onDragStart);
+    };
+  }, []);
+
   const page = route.name === 'work'
     ? <ProjectDetail slug={route.slug} />
     : <Home />;
