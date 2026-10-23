@@ -44,7 +44,6 @@ export const projects = [
     cover: '/assets/covers/nba-duel.webp',
     videos: [
       { label: 'NBA 巅峰对决动画 PV', duration: '00:44', src: '/videos/hero-reel.mp4', poster: '/assets/covers/nba-duel.webp' },
-      { label: '球员出场动画', duration: '00:29', src: '/videos/nba-player-intro.mp4', poster: poster('nba-player-intro') },
     ],
     steps: null,
     assetGroups: [
