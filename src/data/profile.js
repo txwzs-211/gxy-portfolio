@@ -1,7 +1,7 @@
 export const profile = {
   name: '吴坤焱',
   brand: '吴',
-  title: 'AI 视频设计师 / AIGC 内容生产',
+  title: 'AI 视频导演',
   heroTitle: 'AI 视频设计师',
   heroSubtitle: 'Visual Designer',
   bio: '覆盖剧本镜头拆解、分镜逻辑设计、美术资产生产、AI 视频生成到后期剪辑包装的完整链路，可独立完成动态内容 0 到 1 的商用落地；精通 Stable Diffusion / ComfyUI 本地部署与节点排障，熟练 LoRA 训练、ControlNet 精控与局部重绘，擅长把碎片化 AI 工具整合为标准化 SOP 管线，并用 Python / vibe coding 快速产出自动化脚本与可交互 Demo。',

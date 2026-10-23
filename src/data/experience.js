@@ -1,7 +1,7 @@
 export const experience = [
   {
     company: '深圳市望尘科技有限公司（GALA Sports）',
-    period: '2026.06 — 至今（2026.07 转正）',
+    period: '2026.07 — 至今',
     role: 'AI 视频动效师',
     project: '▌ 核心项目：游戏研发动画 Demo 制作与 AI 美术工具链建设',
     points: [
