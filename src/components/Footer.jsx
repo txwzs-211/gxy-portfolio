@@ -40,8 +40,8 @@ export default function Footer() {
             )
           ))}
           <div className="contact-card-foot">
-            <span className="chip chip--hot">AI Video Designer</span>
-            <span className="chip">Open to work</span>
+            <a className="chip chip--hot" href="#about">AI Video Designer</a>
+            <a className="chip" href={`mailto:${profile.email}`}>Open to work</a>
           </div>
         </aside>
       </div>
