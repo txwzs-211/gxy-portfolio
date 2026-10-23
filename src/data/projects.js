@@ -27,6 +27,7 @@ const seq = (a, b, fn) => Array.from({ length: b - a + 1 }, (_, k) => fn(a + k))
 /* 大类（列表按此顺序分组） */
 export const categories = [
   { id: 'game', label: 'AI 游戏动画 PV', en: 'Game Animation PV' },
+  { id: 'gacha', label: '游戏抽卡动画', en: 'Game Gacha Reveal' },
   { id: 'drama', label: 'AI 影视 / 短剧', en: 'Film & Short Drama' },
   { id: 'ui', label: 'UI 视觉设计', en: 'UI / Visual Design' },
 ];
@@ -213,7 +214,7 @@ export const projects = [
 
   /* ===================== 游戏抽卡演出（新增） ===================== */
   {
-    num: '09', category: 'game', slug: 'fm2-gacha',
+    num: '09', category: 'gacha', slug: 'fm2-gacha',
     eyebrow: 'Game Gacha Reveal',
     title: '足球经理人2 · 球星抽卡登场',
     desc: '游戏抽卡演出动画，以「出金预告 → 通道身份揭秘 → 球星亮相」三幕结构推进：球员通道内按荷兰国旗 → POSITION/CB → Liverpool 队徽的顺序自然解锁身份，最终舞台聚光定格，完成从神秘背影到完整球星的情绪释放。',
@@ -254,7 +255,7 @@ export const projects = [
     ],
   },
   {
-    num: '10', category: 'game', slug: 'bm2-gacha',
+    num: '10', category: 'gacha', slug: 'bm2-gacha',
     eyebrow: 'Game Gacha Reveal · Basketball',
     title: '篮球大师2 · 球星抽卡登场',
     desc: '篮球题材游戏抽卡演出动画，以「卡牌亮相 → 球馆斗屏造势 → 球员通道揭秘 → 科技感展台聚光定格」推进：罗斯球员卡从翻牌到立绘，配合球馆全景与火花氛围，最终在科技舞台完成球星登场的情绪释放。',
