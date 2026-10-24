@@ -1,34 +1,21 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { profile } from '../data/profile';
 import { projects } from '../data/projects';
 import ProjectReel from './ProjectReel';
 
 export default function Hero() {
   const vidRef = useRef(null);
-  const [muted, setMuted] = useState(false);
 
   useEffect(() => {
     const v = vidRef.current;
     if (!v) return;
     let wantPlay = true;
-
-    // 优先“有声自动播放”；若被浏览器自动播放策略拦截，则先静音起播，
-    // 并在用户首次与页面交互（点击/触摸/按键）后恢复有声。
+    v.muted = true; // 背景视频始终静音，避免自动播放拦截与加载卡顿
     const tryPlay = () => {
       if (!wantPlay) return;
-      v.play().catch(() => {
-        v.muted = true; setMuted(true);
-        v.play().catch(() => {});
-      });
+      v.play().catch(() => {});
     };
-    v.muted = false;
     tryPlay();
-
-    const unmute = () => {
-      if (v.muted) { v.muted = false; setMuted(false); tryPlay(); }
-    };
-    const acts = ['pointerdown', 'keydown', 'touchstart'];
-    acts.forEach((ev) => window.addEventListener(ev, unmute, { once: true }));
 
     // 下滑离开首屏即暂停，回到首屏继续播放
     const io = new IntersectionObserver((entries) => {
@@ -39,20 +26,8 @@ export default function Hero() {
     }, { threshold: [0, 0.5, 0.75, 1] });
     io.observe(v);
 
-    return () => {
-      acts.forEach((ev) => window.removeEventListener(ev, unmute));
-      io.disconnect();
-    };
+    return () => io.disconnect();
   }, []);
-
-  const toggleMute = () => {
-    const v = vidRef.current;
-    if (!v) return;
-    const next = !v.muted;
-    v.muted = next;
-    setMuted(next);
-    if (!next) v.play().catch(() => {});
-  };
 
   const scrollTo = (e, sel) => {
     const t = document.querySelector(sel);
@@ -95,25 +70,6 @@ export default function Hero() {
           <a className="btn-pill btn-pill--ghost" href="#about" onClick={(e) => scrollTo(e, '#about')}>
             了解更多
           </a>
-          <button
-            type="button"
-            className={`hero-x-sound${muted ? ' is-muted' : ''}`}
-            onClick={toggleMute}
-            aria-label={muted ? '开启声音' : '关闭声音'}
-            title={muted ? '开启声音' : '关闭声音'}
-          >
-            {muted ? (
-              <svg viewBox="0 0 24 24" width="19" height="19" fill="none" aria-hidden="true">
-                <path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor" />
-                <path d="M16 9l5 6M21 9l-5 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-              </svg>
-            ) : (
-              <svg viewBox="0 0 24 24" width="19" height="19" fill="none" aria-hidden="true">
-                <path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor" />
-                <path d="M16 9a4 4 0 010 6M18.5 6.5a8 8 0 010 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" fill="none" />
-              </svg>
-            )}
-          </button>
         </div>
       </div>
 

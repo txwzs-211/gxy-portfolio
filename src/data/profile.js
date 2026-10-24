@@ -10,7 +10,7 @@ export const profile = {
   school: '深圳职业技术大学',
   avatar: '/assets/kerwin-avatar.webp',
   heroPoster: '/assets/covers/football-manager.webp',
-  heroVideo: '/videos/football-manager.mp4',
+  heroVideo: '/videos/hero-bg.mp4',
 };
 
 export const stats = [
