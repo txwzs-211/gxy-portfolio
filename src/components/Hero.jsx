@@ -53,10 +53,10 @@ export default function Hero() {
           <span className="dot"></span>AI VIDEO DESIGNER · VISUAL DESIGNER
         </p>
         <h1 className="hero-x-title">
-          <span className="t-accent">KERWIN</span>
+          <span className="t-accent">GAVIN</span>
           <span className="t-line">AI VIDEO</span>
           <span className="t-line">
-            PORTFOLIO<em className="t-hand">Wu&nbsp;Kunyan</em>
+            PORTFOLIO<em className="t-hand">Gong&nbsp;Xinyan</em>
           </span>
         </h1>
         <p className="hero-x-desc">

@@ -1,6 +1,6 @@
 import { profile } from '../data/profile';
 
-const RESUME_HREF = encodeURI('/AI视频设计师-Kevin.pdf');
+const RESUME_HREF = encodeURI('/AI视频设计师-Gavin.pdf');
 
 export default function Footer() {
   const rows = [

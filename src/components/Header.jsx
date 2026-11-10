@@ -6,7 +6,7 @@ const LINKS = [
   { id: 'projects', label: '精选作品' },
   { id: 'contact', label: '联系我' },
 ];
-const RESUME_HREF = encodeURI('/AI视频设计师-Kevin.pdf');
+const RESUME_HREF = encodeURI('/AI视频设计师-Gavin.pdf');
 
 export default function Header() {
   const [open, setOpen] = useState(false);

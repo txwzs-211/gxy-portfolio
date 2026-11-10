@@ -60,6 +60,8 @@ export default function AssetGroup({ group }) {
       {(group.characters || []).map((ch) => (
         <CharacterCard character={ch} key={ch.name} />
       ))}
+
+      <Lightbox list={lb.list} index={lb.index} onClose={lb.close} onPrev={lb.prev} onNext={lb.next} />
     </section>
   );
 }
