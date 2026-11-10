@@ -24,7 +24,7 @@ export const education = {
   school: '广州南方学院 · 数字媒体艺术（本科在读）',
   major: '本科在读 · 2026级',
   courses: '视听语言、非线性剪辑、故事创作基础、AIGC数字艺术创意、三维动画基础、影视特效制作、交互设计原理、游戏广告设计',
-  awards: ['深圳职业技术大学 · 三等奖学金', 'CET-4 500+'],
+  awards: ['广州南方学院 · 学业奖学金', 'CET-4 500+'],
 };
 
 export const certs = [
