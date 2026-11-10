@@ -44,7 +44,7 @@ export const projects = [
     meta: ['体育视觉', '出场包装', '动态分镜'],
     cover: '/assets/covers/nba-duel.webp',
     videos: [
-      { label: 'NBA 巅峰对决动画 PV', duration: '00:44', src: '/videos/hero-reel.mp4', poster: '/assets/covers/nba-duel.webp' },
+      { label: 'NBA 巅峰对决动画 PV', duration: '00:44', src: 'https://portfolio-videos-1341078655.cos.ap-guangzhou.myqcloud.com/hero-reel.mp4', poster: '/assets/covers/nba-duel.webp' },
     ],
     steps: null,
     assetGroups: [
@@ -67,7 +67,7 @@ export const projects = [
     year: '2025 — 2026', role: 'AI 视频 / 动态视觉包装', tools: ['AI 视频生成', 'After Effects', 'Premiere'],
     meta: ['游戏 PV'],
     cover: '/assets/covers/football-manager.webp',
-    videos: [{ label: '足球经理人 PV', duration: '01:25', src: '/videos/football-manager.mp4', poster: '/assets/covers/football-manager.webp' }],
+    videos: [{ label: '足球经理人 PV', duration: '01:25', src: 'https://portfolio-videos-1341078655.cos.ap-guangzhou.myqcloud.com/football-manager.mp4', poster: '/assets/covers/football-manager.webp' }],
     steps: null,
     assetGroups: [
       {
@@ -180,9 +180,9 @@ export const projects = [
     year: '2025 — 2026', role: 'AI 视频 / 运营内容', tools: ['AI 视频生成', 'Premiere'], meta: ['运营视频', '竖屏内容'],
     cover: '/assets/covers/comic-ops.webp',
     videos: [
-      { label: '剧情切片', duration: '00:28', src: '/videos/comic-ops-clip.mp4', poster: '/assets/covers/comic-ops.webp' },
-      { label: '航船展示（竖屏）', duration: '00:40', src: '/videos/comic-ops-scene.mp4', poster: poster('comic-ops-scene'), portrait: true },
-      { label: '道具转场（竖屏）', duration: '00:34', src: '/videos/comic-ops-transition.mp4', poster: poster('comic-ops-transition'), portrait: true },
+      { label: '剧情切片', duration: '00:28', src: 'https://portfolio-videos-1341078655.cos.ap-guangzhou.myqcloud.com/comic-ops-clip.mp4', poster: '/assets/covers/comic-ops.webp' },
+      { label: '航船展示（竖屏）', duration: '00:40', src: 'https://portfolio-videos-1341078655.cos.ap-guangzhou.myqcloud.com/comic-ops-scene.mp4', poster: poster('comic-ops-scene'), portrait: true },
+      { label: '道具转场（竖屏）', duration: '00:34', src: 'https://portfolio-videos-1341078655.cos.ap-guangzhou.myqcloud.com/comic-ops-transition.mp4', poster: poster('comic-ops-transition'), portrait: true },
     ],
     steps: null, assetGroups: [],
   },
@@ -221,7 +221,7 @@ export const projects = [
     year: '2026', role: 'AI 视频 / 抽卡演出与后期包装', tools: ['AI 视频生成', 'ComfyUI', 'Premiere', 'After Effects'],
     meta: ['Walkout 出场', '身份解锁', '电影化运镜'],
     cover: '/assets/covers/fm-gacha.webp',
-    videos: [{ label: '球星抽卡登场', duration: '00:31', src: '/videos/fm2-gacha.mp4', poster: '/assets/covers/fm-gacha.webp' }],
+    videos: [{ label: '球星抽卡登场', duration: '00:31', src: 'https://portfolio-videos-1341078655.cos.ap-guangzhou.myqcloud.com/fm2-gacha.mp4', poster: '/assets/covers/fm-gacha.webp' }],
     steps: [
       { title: '前期定调 · 三幕情绪结构', desc: '明确「出金预告 → 通道揭秘 → 亮相定格」的情绪曲线，先锁主参考图（MRI）与环境光板，统一跨镜头的服装、材质与光影基调。' },
       { title: '资产工程 · 分镜脚本', desc: '产出角色正 / 侧 / 表情三视角、关键道具与场景板；按景别、主体动作、运镜、情绪、时长、上屏文字六要素写分镜，遵循一镜一动作一运镜。' },
@@ -262,7 +262,7 @@ export const projects = [
     year: '2026', role: 'AI 视频 / 抽卡演出与后期包装', tools: ['AI 视频生成', 'ComfyUI', 'Premiere', 'After Effects'],
     meta: ['Walkout 出场', '球星亮相', '科技感舞台'],
     cover: '/assets/covers/bm2-gacha.webp',
-    videos: [{ label: '球星抽卡登场', duration: '00:21', src: '/videos/bm2-gacha.mp4', poster: '/assets/covers/bm2-gacha.webp' }],
+    videos: [{ label: '球星抽卡登场', duration: '00:21', src: 'https://portfolio-videos-1341078655.cos.ap-guangzhou.myqcloud.com/bm2-gacha.mp4', poster: '/assets/covers/bm2-gacha.webp' }],
     steps: [
       { title: '前期定调 · 三幕情绪结构', desc: '明确「卡牌预告 → 通道揭秘 → 亮相定格」的情绪曲线，先锁主参考图（MRI）与环境光板，统一跨镜头的球衣、材质与光影基调。' },
       { title: '资产工程 · 分镜脚本', desc: '产出角色参考、斗屏 / 球馆 / 通道 / 展台场景板与球星卡道具；按景别、主体动作、运镜、情绪、时长、上屏文字写分镜，遵循一镜一动作一运镜。' },

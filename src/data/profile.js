@@ -10,7 +10,7 @@ export const profile = {
   school: '广州南方学院',
   avatar: '/assets/avatar.webp',
   heroPoster: '/assets/covers/football-manager.webp',
-  heroVideo: '/videos/hero-bg.mp4',
+  heroVideo: 'https://portfolio-videos-1341078655.cos.ap-guangzhou.myqcloud.com/hero-bg.mp4',
 };
 
 export const stats = [

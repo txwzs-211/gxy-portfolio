@@ -1,10 +1,10 @@
 ﻿/* =====================================================================
-   skin.css 鈥斺€?V3 瑙嗚鐨偆锛堣崸鍏夐吀鎬х豢 脳 鏆栭粦锛夛紝瀵归綈鍙傝€冧綔鍝侀泦
-   鍙仛瑙嗚琛ㄧ幇锛屼笉鏀瑰彉 framework.css 宸查獙璇佺殑浜や簰/缁撴瀯绫诲悕閫昏緫銆?
-   缁勪欢鏂板鐨?hud-/hero-x-/sec-/bento-/btn-pill 绛夌被鍦ㄦ瀹氫箟銆?
+skin.css — V3 视觉皮肤（荧光酸性绿 × 暖黑），对齐参考作品集
+  只做视觉表现，不改变 framework.css 已验证的交互/结构类名逻辑。
+  组件新增的 hud-/hero-x-/sec-/bento-/btn-pill 等类在此定义。
    ===================================================================== */
 
-/* ---------------- 閫氱敤 ---------------- */
+/* ---------------- 通用 ---------------- */
 .section { max-width: var(--max); margin: 0 auto; padding: clamp(70px, 10vh, 130px) clamp(20px, 4vw, 56px); }
 
 .btn-pill {
@@ -18,14 +18,14 @@
 .btn-pill--ghost { border: 1px solid rgba(255,255,255,.22); color: var(--text); }
 .btn-pill--ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
 
-/* 婊氬姩鍏ュ満锛堥厤鍚?useScrollReveal 鍔犵殑 .visible锛?*/
+/* 滚动入场（配合 useScrollReveal 加的 .visible */
 .about-x, .works-x, .strengths-x {
   opacity: 0; transform: translateY(30px);
   transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1);
 }
 .about-x.visible, .works-x.visible, .strengths-x.visible { opacity: 1; transform: none; }
 
-/* 绔犺妭澶ф爣棰橈細瓒呭ぇ鑻辨枃 + 涓枃鍓爣 + 鈫?*/
+/* 章节大标题：超大英文 + 中文副标 + 下划线 */
 .sec-head { margin-bottom: 46px; }
 .sec-title {
   font-family: var(--font-display);
@@ -217,7 +217,7 @@
 }
 .bento-cell:active { transform: translateY(-2px) scale(.992); }
 .bento-cell:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-/* 瑙﹀睆鏃?hover锛氱洿鎺ュ父鏄惧疄蹇冪豢鑹测€滆繘鍏モ€濈澶达紝鏄庣‘鍙偣 */
+/* 触屏无 hover：直接常显实心绿色「进入」箭头，明确可点 */
 @media (hover: none) {
   .bento-go { opacity: 1; background: var(--accent); color: var(--on-accent); border-color: transparent; }
 }
@@ -235,7 +235,7 @@
 @media (max-width: 560px) {
   .bento-grid { grid-auto-rows: 180px; gap: 12px; }
   .bento-body { padding: 16px 54px 16px 16px; }
-  /* 绐勫睆 Hero 鏍囬锛氭敹灏忓瓧鍙峰苟鍏佽鎹㈣锛岄伩鍏嶆í鍚戣鍒?*/
+  /* 窄屏 Hero 标题：收小字号并允许换行，避免横向溢出 */
   .hero-x-title { font-size: clamp(38px, 13vw, 64px); overflow-wrap: break-word; }
   .hero-x-title .t-line { gap: 10px; }
 }
@@ -401,7 +401,7 @@ a.contact-row:hover dd { color: var(--accent); }
 .contact-foot a:hover { color: var(--accent); }
 
 /* =====================================================================
-   鍝嶅簲寮忥紙棣栭〉鍖哄潡锛?
+    响应式（首页区块）
    ===================================================================== */
 @media (max-width: 1080px) {
   .str-grid { grid-auto-rows: auto; }
@@ -425,7 +425,7 @@ a.contact-row:hover dd { color: var(--accent); }
 }
 
 /* =====================================================================
-   璇︽儏椤电毊鑲ゅ寮猴紙涓嶆敼缁撴瀯锛屽彧鎻愯川鎰燂級
+    详情页皮肤增强（不改结构，只提质感）
    ===================================================================== */
 .detail-page { background:
   radial-gradient(ellipse 70% 40% at 20% 0%, rgba(159,224,75,.06), transparent 60%),
@@ -531,14 +531,14 @@ a.contact-row:hover dd { color: var(--accent); }
   .back-top { transition: none; }
 }
 
-/* 濯掍綋闃蹭笅杞斤細绂佹鍥剧墖鎷栨嫿銆佺Щ鍔ㄧ闀挎寜淇濆瓨銆佸獟浣撳唴瀹归€変腑 */
+/* 媒体防下载：禁止图片拖拽、移动端长按保存、媒体内容选中 */
 img, video {
   -webkit-user-drag: none;
   -webkit-touch-callout: none;
   user-select: none;
 }
 
-/* 鍙偣鍑绘爣绛撅細鍘讳笅鍒掔嚎锛宧over 楂樹寒 */
+/* 可点击标签：去下划线，hover 高亮 */
 a.chip { text-decoration: none; cursor: pointer; transition: border-color .25s ease, color .25s ease; }
 a.chip:hover { border-color: var(--accent); color: var(--accent); }
 
