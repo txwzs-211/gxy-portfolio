@@ -1,8 +1,8 @@
 export const experience = [
   {
     company: '深圳市望尘科技有限公司（GALA Sports）',
-    period: '2026.07 — 至今',
-    role: 'AI 视频动效师',
+    period: '2026.06 — 2026.09（实习）',
+    role: 'AI 视频动效设计师',
     project: '▌ 核心项目：游戏研发动画 Demo 制作与 AI 美术工具链建设',
     points: [
       '根据游戏策划与美术需求，制作球星卡牌抽卡动画等研发演示 Demo，兼具策划方案与演示功能，为 3D 美术与特效团队提供视觉参考与验收标准，交付质量 100% 通过验收。',
@@ -13,7 +13,7 @@ export const experience = [
   },
   {
     company: '网易有道信息技术有限公司',
-    period: '2026.02 — 2026.07',
+    period: '2026.02 — 2026.06（实习）',
     role: 'AI 视频设计师',
     project: '▌ 核心项目：AI 真人短剧全流程制作与 SOP 优化',
     points: [
@@ -25,7 +25,7 @@ export const experience = [
   },
   {
     company: '深圳传音控股股份有限公司',
-    period: '2025.09 — 2025.12',
+    period: '2025.09 — 2025.12（实习）',
     role: '游戏 AI 美术设计',
     project: '▌ 核心项目：游戏美术资产 AI 提效与 UI 设计',
     points: [
@@ -37,13 +37,13 @@ export const experience = [
   },
   {
     company: '高灯科技（腾讯控股）',
-    period: '2025.06 — 2025.08',
+    period: '2025.06 — 2025.08（实习）',
     role: 'AI 视觉设计师',
     project: '▌ 核心项目：商业视觉素材 AIGC 批处理与小程序 UI 设计',
     points: [
       { text: '搭建 ComfyUI 批处理工作流，结合 LoRA 训练与 ControlNet 精控统一视觉风格，批量生成店面小程序商品图，', highlight: '日均处理素材 500+ 张、人工精修成本降低 60%' },
       '运用 AI 视频工具批量生成商品宣传片 / 短视频，基于商品特性设计提示词脚本，产出有效营销视频，内容制作效率明显提升。',
-      { text: '负责小程序界面功能优化与视觉设计（语音功能折叠等交互），vibe coding 快速产出可演示 UI 动效 Demo，', highlight: '设计落地效率提升 75%' },
+      { text: '负责小程序界面功能优化与视觉设计（语音功能折叠等交互），快速产出可演示 UI 动效 Demo，', highlight: '设计落地效率提升 75%' },
     ],
   },
 ];
