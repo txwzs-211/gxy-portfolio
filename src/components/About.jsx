@@ -4,7 +4,7 @@ import { experience } from '../data/experience';
 import { tags } from '../data/skills';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
-const RESUME_HREF = encodeURI('/AI视频设计师-Kerwin.pdf');
+const RESUME_HREF = encodeURI('/AI视频设计师-Kevin.pdf');
 
 function PointText({ pt }) {
   if (typeof pt === 'string') return <>{pt}</>;
@@ -16,7 +16,7 @@ export default function About() {
   const [active, setActive] = useState(0); // 默认展开最近一段
 
   const facts = [
-    { k: '姓名 / NAME', v: `${profile.name} · Kerwin` },
+    { k: '姓名 / NAME', v: `${profile.name} · Kevin` },
     { k: '方向 / FOCUS', v: profile.title },
     { k: '电话 / PHONE', v: profile.phone },
     { k: '邮箱 / EMAIL', v: profile.email },
@@ -49,7 +49,7 @@ export default function About() {
 
         {/* 右：介绍 */}
         <div className="about-main">
-          <h3 className="about-hi">Hi, I am <span className="hl">Kerwin</span>!</h3>
+          <h3 className="about-hi">Hi, I am <span className="hl">Kevin</span>!</h3>
           <p className="about-bio">{profile.bio}</p>
 
           <dl className="about-facts">
