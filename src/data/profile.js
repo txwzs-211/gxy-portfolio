@@ -8,7 +8,7 @@ export const profile = {
   phone: '13316967549',
   email: '1103236368@qq.com',
   school: '广州南方学院',
-  avatar: '/assets/kerwin-avatar.webp',
+  avatar: '/assets/avatar.webp',
   heroPoster: '/assets/covers/football-manager.webp',
   heroVideo: '/videos/hero-bg.mp4',
 };

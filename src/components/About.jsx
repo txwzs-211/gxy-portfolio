@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { profile, stats, education, certs, award } from '../data/profile';
+import { profile, stats, education, certs } from '../data/profile';
 import { experience } from '../data/experience';
 import { tags } from '../data/skills';
 import { useScrollReveal } from '../hooks/useScrollReveal';
@@ -119,7 +119,7 @@ export default function About() {
         </div>
       </div>
 
-      {/* 教育 / 证书 / 获奖 */}
+      {/* 教育 / 证书 */}
       <div className="about-cred">
         <div className="cred-card">
           <span className="mini-kicker">EDUCATION</span>
@@ -133,12 +133,6 @@ export default function About() {
           <ul className="cred-list">
             {certs.map((c, i) => <li key={i}><span>{c.icon}</span>{c.text}</li>)}
           </ul>
-        </div>
-        <div className="cred-card cred-card--hot">
-          <span className="mini-kicker">AWARD</span>
-          <div className="cred-award-tags">{award.tags.map((t, i) => <span className="chip chip--hot" key={i}>{t}</span>)}</div>
-          <h5>{award.title}</h5>
-          <p>{award.desc}</p>
         </div>
       </div>
     </section>
