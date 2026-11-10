@@ -1,10 +1,10 @@
-/* =====================================================================
-   skin.css —— V3 视觉皮肤（荧光酸性绿 × 暖黑），对齐参考作品集
-   只做视觉表现，不改变 framework.css 已验证的交互/结构类名逻辑。
-   组件新增的 hud-/hero-x-/sec-/bento-/btn-pill 等类在此定义。
+﻿/* =====================================================================
+   skin.css 鈥斺€?V3 瑙嗚鐨偆锛堣崸鍏夐吀鎬х豢 脳 鏆栭粦锛夛紝瀵归綈鍙傝€冧綔鍝侀泦
+   鍙仛瑙嗚琛ㄧ幇锛屼笉鏀瑰彉 framework.css 宸查獙璇佺殑浜や簰/缁撴瀯绫诲悕閫昏緫銆?
+   缁勪欢鏂板鐨?hud-/hero-x-/sec-/bento-/btn-pill 绛夌被鍦ㄦ瀹氫箟銆?
    ===================================================================== */
 
-/* ---------------- 通用 ---------------- */
+/* ---------------- 閫氱敤 ---------------- */
 .section { max-width: var(--max); margin: 0 auto; padding: clamp(70px, 10vh, 130px) clamp(20px, 4vw, 56px); }
 
 .btn-pill {
@@ -18,14 +18,14 @@
 .btn-pill--ghost { border: 1px solid rgba(255,255,255,.22); color: var(--text); }
 .btn-pill--ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
 
-/* 滚动入场（配合 useScrollReveal 加的 .visible） */
+/* 婊氬姩鍏ュ満锛堥厤鍚?useScrollReveal 鍔犵殑 .visible锛?*/
 .about-x, .works-x, .strengths-x {
   opacity: 0; transform: translateY(30px);
   transition: opacity .9s cubic-bezier(.2,.7,.2,1), transform .9s cubic-bezier(.2,.7,.2,1);
 }
 .about-x.visible, .works-x.visible, .strengths-x.visible { opacity: 1; transform: none; }
 
-/* 章节大标题：超大英文 + 中文副标 + ↘ */
+/* 绔犺妭澶ф爣棰橈細瓒呭ぇ鑻辨枃 + 涓枃鍓爣 + 鈫?*/
 .sec-head { margin-bottom: 46px; }
 .sec-title {
   font-family: var(--font-display);
@@ -37,7 +37,7 @@
 .sec-sub { margin: 14px 0 0; font-size: 17px; color: var(--muted); }
 .sec-note { margin: 8px 0 0; font-size: 13px; color: var(--faint); }
 
-/* ---------------- 悬浮胶囊导航 ---------------- */
+/* ---------------- 鎮诞鑳跺泭瀵艰埅 ---------------- */
 .hud-nav-wrap { position: fixed; top: 16px; left: 0; right: 0; z-index: 120; padding: 0 20px; pointer-events: none; }
 .hud-nav {
   pointer-events: auto;
@@ -142,7 +142,7 @@
 }
 .hero-x-scroll .bar { width: 1px; height: 46px; background: linear-gradient(var(--accent), transparent); }
 
-/* 底部作品封面无限滚动带 */
+/* 搴曢儴浣滃搧灏侀潰鏃犻檺婊氬姩甯?*/
 .hero-x-reel { position: relative; z-index: 2; margin-top: clamp(48px, 7vh, 90px); overflow: hidden;
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
           mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
@@ -167,7 +167,7 @@
   background: linear-gradient(transparent, rgba(0,0,0,.78));
 }
 
-/* ---------------- 作品 BENTO ---------------- */
+/* ---------------- 浣滃搧 BENTO ---------------- */
 .bento-group { margin-bottom: 66px; }
 .bento-group:last-child { margin-bottom: 0; }
 .bento-group-label { display: flex; align-items: center; gap: 12px; margin: 0 2px 20px; }
@@ -217,12 +217,12 @@
 }
 .bento-cell:active { transform: translateY(-2px) scale(.992); }
 .bento-cell:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-/* 触屏无 hover：直接常显实心绿色“进入”箭头，明确可点 */
+/* 瑙﹀睆鏃?hover锛氱洿鎺ュ父鏄惧疄蹇冪豢鑹测€滆繘鍏モ€濈澶达紝鏄庣‘鍙偣 */
 @media (hover: none) {
   .bento-go { opacity: 1; background: var(--accent); color: var(--on-accent); border-color: transparent; }
 }
 
-/* ---------------- 响应式 ---------------- */
+/* ---------------- 鍝嶅簲寮?---------------- */
 @media (max-width: 980px) {
   .bento-grid { grid-auto-rows: 200px; }
   .bento-cell, .bento-cell--tall, .bento-cell--md { grid-column: span 12; grid-row: span 1; }
@@ -235,13 +235,13 @@
 @media (max-width: 560px) {
   .bento-grid { grid-auto-rows: 180px; gap: 12px; }
   .bento-body { padding: 16px 54px 16px 16px; }
-  /* 窄屏 Hero 标题：收小字号并允许换行，避免横向裁切 */
+  /* 绐勫睆 Hero 鏍囬锛氭敹灏忓瓧鍙峰苟鍏佽鎹㈣锛岄伩鍏嶆í鍚戣鍒?*/
   .hero-x-title { font-size: clamp(38px, 13vw, 64px); overflow-wrap: break-word; }
   .hero-x-title .t-line { gap: 10px; }
 }
 
 /* =====================================================================
-   通用小元素
+   閫氱敤灏忓厓绱?
    ===================================================================== */
 .mini-kicker {
   display: inline-block;
@@ -296,11 +296,11 @@
 .about-now .mini-kicker { margin-bottom: 12px; }
 .about-tags { display: flex; flex-wrap: wrap; gap: 9px; }
 
-/* CAREER 横向时间轴 */
+/* CAREER 妯悜鏃堕棿杞?*/
 .career { margin-top: clamp(56px, 8vh, 96px); }
 .career-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 26px; }
 .career-head h4 { font-size: 18px; }
-.career-track { position: relative; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.career-track { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .career-track::before {
   content: ""; position: absolute; top: 15px; left: 6%; right: 6%; height: 1px;
   background: linear-gradient(90deg, transparent, var(--line-hover), transparent);
@@ -323,7 +323,7 @@
 .career-points { margin: 12px 0 0; padding-left: 16px; color: var(--muted); font-size: 12.5px; line-height: 1.8; }
 .career-points mark { background: none; color: var(--accent); font-weight: 600; }
 
-/* 教育/证书/获奖 */
+/* 鏁欒偛/璇佷功/鑾峰 */
 .about-cred { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 56px; }
 .cred-card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
 .cred-card--hot { border-color: rgba(200,247,59,.35); background: linear-gradient(180deg, rgba(200,247,59,.06), var(--panel)); }
@@ -401,7 +401,7 @@ a.contact-row:hover dd { color: var(--accent); }
 .contact-foot a:hover { color: var(--accent); }
 
 /* =====================================================================
-   响应式（首页区块）
+   鍝嶅簲寮忥紙棣栭〉鍖哄潡锛?
    ===================================================================== */
 @media (max-width: 1080px) {
   .str-grid { grid-auto-rows: auto; }
@@ -425,7 +425,7 @@ a.contact-row:hover dd { color: var(--accent); }
 }
 
 /* =====================================================================
-   详情页皮肤增强（不改结构，只提质感）
+   璇︽儏椤电毊鑲ゅ寮猴紙涓嶆敼缁撴瀯锛屽彧鎻愯川鎰燂級
    ===================================================================== */
 .detail-page { background:
   radial-gradient(ellipse 70% 40% at 20% 0%, rgba(159,224,75,.06), transparent 60%),
@@ -477,7 +477,7 @@ a.contact-row:hover dd { color: var(--accent); }
 .detail-back-link { color: var(--accent); }
 .detail-empty-note { border-radius: var(--radius); }
 
-/* ---------- Hero 声音开关 ---------- */
+/* ---------- Hero 澹伴煶寮€鍏?---------- */
 .hero-x { position: relative; }
 .hero-x-sound {
   position: static;
@@ -494,7 +494,7 @@ a.contact-row:hover dd { color: var(--accent); }
   .hero-x-sound { width: 44px; height: 44px; margin-left: 2px; }
 }
 
-/* ---------- 悬浮回到顶部圆形按钮 ---------- */
+/* ---------- 鎮诞鍥炲埌椤堕儴鍦嗗舰鎸夐挳 ---------- */
 .back-top {
   position: fixed; left: 0; right: 0; bottom: 32px;
   width: 54px; height: 54px; margin: 0 auto; border-radius: 50%;
@@ -531,13 +531,14 @@ a.contact-row:hover dd { color: var(--accent); }
   .back-top { transition: none; }
 }
 
-/* 媒体防下载：禁止图片拖拽、移动端长按保存、媒体内容选中 */
+/* 濯掍綋闃蹭笅杞斤細绂佹鍥剧墖鎷栨嫿銆佺Щ鍔ㄧ闀挎寜淇濆瓨銆佸獟浣撳唴瀹归€変腑 */
 img, video {
   -webkit-user-drag: none;
   -webkit-touch-callout: none;
   user-select: none;
 }
 
-/* 可点击标签：去下划线，hover 高亮 */
+/* 鍙偣鍑绘爣绛撅細鍘讳笅鍒掔嚎锛宧over 楂樹寒 */
 a.chip { text-decoration: none; cursor: pointer; transition: border-color .25s ease, color .25s ease; }
 a.chip:hover { border-color: var(--accent); color: var(--accent); }
+
